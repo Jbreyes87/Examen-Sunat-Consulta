@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: sunat-consulta
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sunat_db
+    username: postgres
+    password: alfin
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  cloud:
+    openfeign:
+      client:
+        config:
+          sunat-api:
+            logger-level: BASIC
+
+server:
+  port: 8082
+
+decolecta:
+  api:
+    base-url: https://api.decolecta.com/v1
+    token: sk_13498.cAZ0AJ8I7ujBgWYptMId5NduuhpMlynb
+    connect-timeout-ms: 5000
+    read-timeout-ms: 10000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
