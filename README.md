@@ -307,3 +307,7 @@ src/main/java/com/sunat_consulta/sunat_consulta/
     ├── CondicionDomicilio.java
     └── ResultadoConsulta.java
 ```
+ evidencias de consultas
+![img.png](img.png)
+ evidencia historial de consultas
+![img_1.png](img_1.png)
